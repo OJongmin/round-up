@@ -5,22 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roundup - 골프의 시작</title>
     <style>
-        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f8f9fa; font-family: sans-serif; }
-        .container { text-align: center; }
-        h1 { color: #2c3e50; margin-bottom: 30px; }
-        .buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .btn { padding: 15px 30px; border-radius: 10px; text-decoration: none; color: white; font-weight: bold; font-size: 18px; transition: 0.3s; }
-        .apple { background-color: #000; }
-        .google { background-color: #34a853; }
-        .btn:hover { opacity: 0.8; }
+        body { 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #ffffff; /* 배경을 깔끔한 흰색으로 */
+            font-family: 'Pretendard', sans-serif; 
+        }
+        .container { text-align: center; padding: 20px; }
+        h1 { color: #1d1d1f; margin-bottom: 40px; font-size: 2rem; font-weight: 700; }
+        
+        .buttons { 
+            display: flex; 
+            gap: 15px; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            align-items: center;
+        }
+        
+        .badge img {
+            height: 60px; /* 배지 높이 조절 */
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .badge:hover img {
+            transform: scale(1.05); /* 마우스 올리면 살짝 커지는 효과 */
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .badge img { height: 50px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Roundup 앱 다운로드</h1>
+        <h1>Roundup</h1>
         <div class="buttons">
-            <a href="#" class="btn apple">App Store</a>
-            <a href="#" class="btn google">Google Play</a>
+            <a href="여기에_앱스토어_링크_넣기" class="badge">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1310688000&h=656960d73809228d61853d9e0300977a" alt="Download on the App Store">
+            </a>
+            
+            <a href="여기에_구글플레이_링크_넣기" class="badge">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png" alt="Get it on Google Play" style="height: 87px; margin: -13px;">
+            </a>
         </div>
     </div>
 </body>
