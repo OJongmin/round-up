@@ -8,7 +8,6 @@
     <style>
         :root {
             --primary-color: #1d1d1f;
-            --accent-color: #28a745; /* 골프 느낌의 그린 포인트 */
             --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
@@ -28,9 +27,9 @@
             border-radius: 30px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             text-align: center;
-            max-width: 400px;
+            max-width: 500px; /* PC에서도 보기 좋게 최대 너비 조정 */
             width: 90%;
-            backdrop-filter: blur(10px); /* 배경 흐림 효과 */
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.3);
         }
 
@@ -56,38 +55,50 @@
 
         .buttons { 
             display: flex; 
-            flex-direction: column; /* 모바일 우선으로 세로 정렬 */
-            gap: 12px; 
+            flex-direction: row; /* 기본 가로 정렬 */
+            gap: 15px; /* 버튼 사이 간격 */
             justify-content: center; 
             align-items: center;
+            flex-wrap: wrap; /* 화면 작아지면 자동 줄바꿈 */
         }
         
         .badge {
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: block;
+            text-decoration: none; /* 링크 밑줄 제거 */
         }
         
+        /* 배지 이미지 크기 통일 */
         .badge img {
-            height: 58px;
+            height: 60px; /* 높이를 60px로 통일 */
+            width: auto; /* 비율 유지 */
             display: block;
         }
         
         .badge:hover {
-            transform: translateY(-5px); /* 위로 살짝 떠오르는 효과 */
+            transform: translateY(-5px); /* 호버 시 떠오르는 효과 */
             filter: brightness(1.1);
         }
 
-        /* 푸터 정보 */
+        /* 구글 플레이 배지 여백 미세 조정 */
+        .badge-google-play img {
+            height: 86px; /* 이미지 자체 여백 때문에 높이를 더 크게 잡음 */
+            margin: -13px 0; /* 음수 마진으로 실제 보이는 크기를 맞춤 */
+        }
+
         .footer {
             margin-top: 30px;
             font-size: 0.8rem;
             color: #b2bec3;
         }
 
-        /* 데스크탑에서는 가로로 배치 */
-        @media (min-width: 480px) {
-            .buttons { flex-direction: row; }
-            .card { max-width: 500px; }
+        /* 모바일 화면 조정 */
+        @media (max-width: 480px) {
+            .card { padding: 40px 20px; }
+            h1 { font-size: 1.8rem; }
+            p { font-size: 1rem; }
+            .badge img { height: 50px; } /* 모바일에서는 살짝 작게 */
+            .badge-google-play img { height: 72px; margin: -11px 0; }
         }
     </style>
 </head>
@@ -98,12 +109,12 @@
         <p>더 스마트한 골프 라이프의 시작<br>지금 바로 라운드업을 만나보세요.</p>
         
         <div class="buttons">
-            <a href="#" class="badge">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1310688000&h=656960d73809228d61853d9e0300977a" alt="Download on the App Store">
+            <a href="#" class="badge badge-app-store">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1310688000&h=656960d73809228d61853d9e0300977a" alt="App Store에서 다운로드 하기">
             </a>
             
-            <a href="#" class="badge">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png" alt="Get it on Google Play" style="height: 84px; margin: -13px 0;">
+            <a href="#" class="badge badge-google-play">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png" alt="Google Play에서 다운로드">
             </a>
         </div>
 
