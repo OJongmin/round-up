@@ -27,15 +27,17 @@
             border-radius: 30px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             text-align: center;
-            max-width: 500px; /* PC에서도 보기 좋게 최대 너비 조정 */
+            max-width: 500px;
             width: 90%;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.3);
         }
 
-        .logo-area {
-            font-size: 3rem;
-            margin-bottom: 10px;
+        /* 로고 스타일 조정 */
+        .logo-area img {
+            height: 80px; /* 로고 높이 */
+            width: auto;
+            margin-bottom: 20px; /* 로고 아래 여백 */
         }
 
         h1 { 
@@ -55,35 +57,33 @@
 
         .buttons { 
             display: flex; 
-            flex-direction: row; /* 기본 가로 정렬 */
-            gap: 15px; /* 버튼 사이 간격 */
+            flex-direction: row; 
+            gap: 15px; 
             justify-content: center; 
             align-items: center;
-            flex-wrap: wrap; /* 화면 작아지면 자동 줄바꿈 */
+            flex-wrap: wrap;
         }
         
         .badge {
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             display: block;
-            text-decoration: none; /* 링크 밑줄 제거 */
+            text-decoration: none;
         }
         
-        /* 배지 이미지 크기 통일 */
         .badge img {
-            height: 60px; /* 높이를 60px로 통일 */
-            width: auto; /* 비율 유지 */
+            height: 60px;
+            width: auto;
             display: block;
         }
         
         .badge:hover {
-            transform: translateY(-5px); /* 호버 시 떠오르는 효과 */
+            transform: translateY(-5px);
             filter: brightness(1.1);
         }
 
-        /* 구글 플레이 배지 여백 미세 조정 */
         .badge-google-play img {
-            height: 86px; /* 이미지 자체 여백 때문에 높이를 더 크게 잡음 */
-            margin: -13px 0; /* 음수 마진으로 실제 보이는 크기를 맞춤 */
+            height: 86px;
+            margin: -13px 0;
         }
 
         .footer {
@@ -92,19 +92,22 @@
             color: #b2bec3;
         }
 
-        /* 모바일 화면 조정 */
         @media (max-width: 480px) {
             .card { padding: 40px 20px; }
+            .logo-area img { height: 60px; } /* 모바일에서는 로고를 살짝 작게 */
             h1 { font-size: 1.8rem; }
             p { font-size: 1rem; }
-            .badge img { height: 50px; } /* 모바일에서는 살짝 작게 */
+            .badge img { height: 50px; }
             .badge-google-play img { height: 72px; margin: -11px 0; }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="logo-area">⛳️</div>
+        <div class="logo-area">
+            <img src="icon.png" alt="Roundup Logo">
+        </div>
+        
         <h1>Roundup</h1>
         <p>더 스마트한 골프 라이프의 시작<br>지금 바로 라운드업을 만나보세요.</p>
         
