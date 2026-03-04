@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roundup - 골프의 시작</title>
+    <title>Roundup - 골프 조인 & 라운딩 파트너 찾기</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <style>
         :root {
@@ -35,9 +35,9 @@
 
         /* 로고 스타일 조정 */
         .logo-area img {
-            height: 80px; /* 로고 높이 */
+            height: 80px; 
             width: auto;
-            margin-bottom: 20px; /* 로고 아래 여백 */
+            margin-bottom: 20px; 
         }
 
         h1 { 
@@ -53,6 +53,12 @@
             margin-bottom: 35px;
             line-height: 1.6;
             font-size: 1.1rem;
+        }
+
+        /* 핵심 키워드 강조 */
+        .highlight {
+            color: #28a745; /* 골프 느낌의 초록색 */
+            font-weight: 700;
         }
 
         .buttons { 
@@ -94,7 +100,7 @@
 
         @media (max-width: 480px) {
             .card { padding: 40px 20px; }
-            .logo-area img { height: 60px; } /* 모바일에서는 로고를 살짝 작게 */
+            .logo-area img { height: 60px; }
             h1 { font-size: 1.8rem; }
             p { font-size: 1rem; }
             .badge img { height: 50px; }
@@ -109,7 +115,11 @@
         </div>
         
         <h1>Roundup</h1>
-        <p>더 스마트한 골프 라이프의 시작<br>지금 바로 라운드업을 만나보세요.</p>
+        <p>
+            내 주변 골퍼들과 함께하는 즐거움<br>
+            <span class="highlight">골프 조인부터 라운딩 파트너까지</span><br>
+            지금 바로 라운드업에서 시작해 보세요.
+        </p>
         
         <div class="buttons">
             <a href="#" class="badge badge-app-store">
