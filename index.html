@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HFZHN9H1WQ'); // 여기에 사장님의 측정 ID를 넣으세요
+    </script>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Roundup - 골프 조인 & 라운딩 파트너 찾기</title>
+    
+    <meta name="description" content="내 주변 골퍼들과 함께하는 즐거움, 골프 조인부터 라운딩 파트너까지 라운드업에서 시작하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roundup - 골프 조인 & 라운딩 파트너 찾기">
+    <meta property="og:description" content="답답해서 직접 만든 골프 조인 앱! 지금 바로 다운로드하세요.">
+    <meta property="og:image" content="https://round-up.kr/icon.png"> <meta property="og:url" content="https://round-up.kr">
+
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
     <style>
         :root {
             --primary-color: #1d1d1f;
+            --accent-color: #28a745;
             --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
@@ -18,116 +35,125 @@
             align-items: center; 
             min-height: 100vh; 
             background: var(--bg-gradient);
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; 
+            font-family: 'Pretendard', sans-serif; 
+            -webkit-font-smoothing: antialiased;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 50px 40px;
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.92);
+            padding: 60px 40px;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
             text-align: center;
-            max-width: 500px;
-            width: 90%;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
+            max-width: 480px;
+            width: 85%;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.4);
+            animation: fadeIn 0.8s ease-out;
         }
 
-        /* 로고 스타일 조정 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .logo-area img {
-            height: 80px; 
+            height: 90px; 
             width: auto;
-            margin-bottom: 20px; 
+            margin-bottom: 25px; 
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         h1 { 
             color: var(--primary-color); 
-            margin: 0 0 10px 0; 
-            font-size: 2.2rem; 
+            margin: 0 0 15px 0; 
+            font-size: 2.5rem; 
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
         }
 
         p {
-            color: #636e72;
-            margin-bottom: 35px;
-            line-height: 1.6;
-            font-size: 1.1rem;
+            color: #4a4a4a;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            font-size: 1.15rem;
+            word-break: keep-all;
         }
 
-        /* 핵심 키워드 강조 */
         .highlight {
-            color: #28a745; /* 골프 느낌의 초록색 */
+            color: var(--accent-color);
             font-weight: 700;
+            position: relative;
+            display: inline-block;
         }
 
         .buttons { 
             display: flex; 
-            flex-direction: row; 
-            gap: 15px; 
-            justify-content: center; 
+            flex-direction: column; 
+            gap: 12px; 
             align-items: center;
-            flex-wrap: wrap;
         }
         
         .badge {
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: block;
-            text-decoration: none;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .badge img {
-            height: 60px;
+            height: 58px;
             width: auto;
-            display: block;
         }
         
         .badge:hover {
-            transform: translateY(-5px);
-            filter: brightness(1.1);
+            transform: scale(1.03);
+            filter: brightness(1.05);
         }
 
         .badge-google-play img {
-            height: 86px;
+            height: 84px; /* 구글 배지는 여백이 많아 더 크게 설정 */
             margin: -13px 0;
         }
 
         .footer {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            color: #b2bec3;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #a0a0a0;
+            letter-spacing: 0.5px;
         }
 
+        /* 모바일 대응 최적화 */
         @media (max-width: 480px) {
-            .card { padding: 40px 20px; }
-            .logo-area img { height: 60px; }
-            h1 { font-size: 1.8rem; }
+            .card { padding: 50px 25px; width: 80%; }
+            h1 { font-size: 2rem; }
             p { font-size: 1rem; }
-            .badge img { height: 50px; }
-            .badge-google-play img { height: 72px; margin: -11px 0; }
+            .badge img { height: 52px; }
+            .badge-google-play img { height: 76px; }
         }
     </style>
 </head>
 <body>
     <div class="card">
         <div class="logo-area">
-            <img src="icon.png" alt="Roundup Logo">
+            <img src="icon.png" alt="Roundup 로고">
         </div>
         
         <h1>Roundup</h1>
         <p>
             내 주변 골퍼들과 함께하는 즐거움<br>
-            <span class="highlight">골프 조인부터 라운딩 파트너까지</span><br>
-            지금 바로 라운드업에서 시작해 보세요.
+            <span class="highlight">골프 조인부터 파트너 매칭까지</span><br>
+            지금 바로 라운드업을 만나보세요.
         </p>
         
         <div class="buttons">
-            <a href="https://apps.apple.com/kr/app/6759701403" class="badge badge-app-store">
-                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1310688000&h=656960d73809228d61853d9e0300977a" alt="App Store에서 다운로드 하기">
+            <a href="https://apps.apple.com/kr/app/6759701403" class="badge" target="_blank">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83" alt="App Store 다운로드">
             </a>
             
-            <a href="https://play.google.com/store/apps/details?id=com.roundup.golf" class="badge badge-google-play">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png" alt="Google Play에서 다운로드">
+            <a href="https://play.google.com/store/apps/details?id=com.roundup.golf" class="badge badge-google-play" target="_blank">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png" alt="Google Play 다운로드">
             </a>
         </div>
 
