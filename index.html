@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFZHN9H1WQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-HFZHN9H1WQ'); // 여기에 사장님의 측정 ID를 넣으세요
+        gtag('config', 'G-HFZHN9H1WQ');
     </script>
 
     <meta charset="UTF-8">
@@ -17,7 +17,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Roundup - 골프 조인 & 라운딩 파트너 찾기">
     <meta property="og:description" content="답답해서 직접 만든 골프 조인 앱! 지금 바로 다운로드하세요.">
-    <meta property="og:image" content="https://round-up.kr/icon.png"> <meta property="og:url" content="https://round-up.kr">
+    <meta property="og:image" content="https://round-up.kr/icon.png"> 
+    <meta property="og:url" content="https://round-up.kr">
 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
@@ -41,7 +42,7 @@
 
         .card {
             background: rgba(255, 255, 255, 0.92);
-            padding: 60px 40px;
+            padding: 50px 30px;
             border-radius: 40px;
             box-shadow: 0 30px 60px rgba(0,0,0,0.12);
             text-align: center;
@@ -58,35 +59,56 @@
         }
 
         .logo-area img {
-            height: 90px; 
+            height: 80px; 
             width: auto;
-            margin-bottom: 25px; 
+            margin-bottom: 20px; 
             border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         h1 { 
             color: var(--primary-color); 
-            margin: 0 0 15px 0; 
-            font-size: 2.5rem; 
+            margin: 0 0 10px 0; 
+            font-size: 2.2rem; 
             font-weight: 800;
             letter-spacing: -1.5px;
         }
 
         p {
             color: #4a4a4a;
-            margin-bottom: 40px;
-            line-height: 1.7;
-            font-size: 1.15rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            font-size: 1.1rem;
             word-break: keep-all;
         }
 
-        .highlight {
-            color: var(--accent-color);
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
+        /* --- 새로 추가된 통계 섹션 --- */
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0,0,0,0.03);
+            border-radius: 20px;
+            padding: 20px 10px;
+            margin-bottom: 35px;
         }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+        /* ----------------------- */
 
         .buttons { 
             display: flex; 
@@ -103,7 +125,7 @@
         }
         
         .badge img {
-            height: 58px;
+            height: 56px;
             width: auto;
         }
         
@@ -113,24 +135,20 @@
         }
 
         .badge-google-play img {
-            height: 84px; /* 구글 배지는 여백이 많아 더 크게 설정 */
-            margin: -13px 0;
+            height: 80px;
+            margin: -12px 0;
         }
 
         .footer {
             margin-top: 40px;
             font-size: 0.85rem;
             color: #a0a0a0;
-            letter-spacing: 0.5px;
         }
 
-        /* 모바일 대응 최적화 */
         @media (max-width: 480px) {
-            .card { padding: 50px 25px; width: 80%; }
-            h1 { font-size: 2rem; }
-            p { font-size: 1rem; }
-            .badge img { height: 52px; }
-            .badge-google-play img { height: 76px; }
+            .card { padding: 40px 20px; }
+            h1 { font-size: 1.8rem; }
+            .stat-value { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -143,16 +161,32 @@
         <h1>Roundup</h1>
         <p>
             내 주변 골퍼들과 함께하는 즐거움<br>
-            <span class="highlight">골프 조인부터 파트너 매칭까지</span><br>
-            지금 바로 라운드업을 만나보세요.
+            골프 조인부터 파트너 매칭까지
         </p>
+
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-value">500+</span>
+                <span class="stat-label">누적 다운로드</span>
+            </div>
+            <div class="stat-item" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; padding: 0 20px;">
+                <span class="stat-value">120+</span>
+                <span class="stat-label">매칭 성공</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">24h</span>
+                <span class="stat-label">실시간 조인</span>
+            </div>
+        </div>
         
         <div class="buttons">
-            <a href="https://apps.apple.com/kr/app/6759701403" class="badge" target="_blank">
+            <a href="https://apps.apple.com/kr/app/6759701403" class="badge" target="_blank" 
+               onclick="gtag('event', 'click_app_store', {'platform': 'ios'});">
                 <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83" alt="App Store 다운로드">
             </a>
             
-            <a href="https://play.google.com/store/apps/details?id=com.roundup.golf" class="badge badge-google-play" target="_blank">
+            <a href="https://play.google.com/store/apps/details?id=com.roundup.golf" class="badge badge-google-play" target="_blank" 
+               onclick="gtag('event', 'click_google_play', {'platform': 'android'});">
                 <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png" alt="Google Play 다운로드">
             </a>
         </div>
