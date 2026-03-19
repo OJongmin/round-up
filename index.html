@@ -13,148 +13,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <title>라운드업(Roundup) - 노쇼 없는 매너 기반 골프 조인 플랫폼</title>
-    <meta name="description" content="잠수·노쇼 걱정 끝! 라운드업(Roundup)에서 신뢰도 높은 매너 평판 시스템으로 최고의 라운딩 파트너를 만나보세요. 내 주변 골퍼와의 실시간 매칭.">
-    <meta name="keywords" content="골프조인, 라운딩파트너, 라운드업, Roundup, 골프매칭, 골린이조인, 노쇼방지골프앱, 화성골프조인">
+    <meta name="description" content="잠수·노쇼 걱정 끝! 라운드업(Roundup)에서 신뢰도 높은 매너 평판 시스템으로 최고의 라운딩 파트너를 만나보세요.">
+    <meta name="keywords" content="골프조인, 라운딩파트너, 라운드업, Roundup, 골프매칭, 노쇼방지">
     <link rel="canonical" href="https://round-up.kr">
 
-    <meta name="naver-site-verification" content="여기에_네이버에서_발급받은_코드_입력" />
-    <meta name="google-site-verification" content="여기에_구글에서_발급받은_코드_입력" />
+    <meta name="naver-site-verification" content="b0ae1dda2167d7a8f17fcf2ed8527d3dcb8c1a10" />
+
+    <meta name="google-site-verification" content="여기에_구글_확인_코드_입력" />
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="라운드업(Roundup) - 매너 기반 골프 조인">
-    <meta property="og:description" content="답답해서 직접 만든 노쇼 방지 골프 조인 앱! 지금 바로 다운로드하세요.">
+    <meta property="og:description" content="답답해서 직접 만든 노쇼 방지 골프 조인 앱! 지금 다운로드하세요.">
     <meta property="og:image" content="https://round-up.kr/icon.png"> 
     <meta property="og:url" content="https://round-up.kr">
 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
     <style>
-        :root {
-            --primary-color: #1d1d1f;
-            --accent-color: #28a745; /* 골프 테마에 맞는 초록 포인트 */
-            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-
-        body { 
-            margin: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            background: var(--bg-gradient);
-            font-family: 'Pretendard', sans-serif; 
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.92);
-            padding: 50px 30px;
-            border-radius: 40px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-            text-align: center;
-            max-width: 480px;
-            width: 85%;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.4);
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .logo-area img {
-            height: 80px; 
-            width: auto;
-            margin-bottom: 20px; 
-            border-radius: 20px;
-        }
-
-        h1 { 
-            color: var(--primary-color); 
-            margin: 0 0 10px 0; 
-            font-size: 2.2rem; 
-            font-weight: 800;
-            letter-spacing: -1.5px;
-        }
-
-        p {
-            color: #4a4a4a;
-            margin-bottom: 30px;
-            line-height: 1.6;
-            font-size: 1.1rem;
-            word-break: keep-all;
-        }
-
-        /* 통계 섹션 (준비해두신 스타일 유지) */
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            background: rgba(0,0,0,0.03);
-            border-radius: 20px;
-            padding: 20px 10px;
-            margin-bottom: 35px;
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .stat-value {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--accent-color);
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: #7f8c8d;
-            font-weight: 600;
-        }
-
-        .buttons { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 12px; 
-            align-items: center;
-        }
-        
-        .badge {
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .badge img {
-            height: 56px;
-            width: auto;
-        }
-        
-        .badge:hover {
-            transform: scale(1.03);
-            filter: brightness(1.05);
-        }
-
-        .badge-google-play img {
-            height: 80px;
-            margin: -12px 0;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 0.85rem;
-            color: #a0a0a0;
-        }
-
-        @media (max-width: 480px) {
-            .card { padding: 40px 20px; }
-            h1 { font-size: 1.8rem; }
-            .stat-value { font-size: 1.2rem; }
-        }
+        /* 기존 스타일 로직 유지 */
+        :root { --primary-color: #1d1d1f; --accent-color: #28a745; --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        body { margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background: var(--bg-gradient); font-family: 'Pretendard', sans-serif; -webkit-font-smoothing: antialiased; }
+        .card { background: rgba(255, 255, 255, 0.92); padding: 50px 30px; border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.12); text-align: center; max-width: 480px; width: 85%; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.4); animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .logo-area img { height: 80px; width: auto; margin-bottom: 20px; border-radius: 20px; }
+        h1 { color: var(--primary-color); margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -1.5px; }
+        p { color: #4a4a4a; margin-bottom: 30px; line-height: 1.6; font-size: 1.1rem; word-break: keep-all; }
+        .buttons { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+        .badge { transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; }
+        .badge img { height: 56px; width: auto; }
+        .badge:hover { transform: scale(1.03); filter: brightness(1.05); }
+        .badge-google-play img { height: 80px; margin: -12px 0; }
+        .footer { margin-top: 40px; font-size: 0.85rem; color: #a0a0a0; }
     </style>
 </head>
 <body>
@@ -162,28 +51,17 @@
         <div class="logo-area">
             <img src="icon.png" alt="Roundup 로고">
         </div>
-        
         <h1>Roundup</h1>
-        <p>
-            내 주변 골퍼들과 함께하는 즐거움<br>
-            <strong>노쇼 걱정 없는</strong> 골프 조인 매칭
-        </p>
-
+        <p>내 주변 골퍼들과 함께하는 즐거움<br><strong>노쇼 걱정 없는</strong> 골프 조인 매칭</p>
         <div class="buttons">
-            <a href="https://apps.apple.com/kr/app/6759701403" class="badge" target="_blank" 
-               onclick="gtag('event', 'click_app_store', {'platform': 'ios'});">
+            <a href="https://apps.apple.com/kr/app/6759701403" class="badge" target="_blank" onclick="gtag('event', 'click_app_store', {'platform': 'ios'});">
                 <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83" alt="App Store 다운로드">
             </a>
-            
-            <a href="https://play.google.com/store/apps/details?id=com.roundup.golf" class="badge badge-google-play" target="_blank" 
-               onclick="gtag('event', 'click_google_play', {'platform': 'android'});">
+            <a href="https://play.google.com/store/apps/details?id=com.roundup.golf" class="badge badge-google-play" target="_blank" onclick="gtag('event', 'click_google_play', {'platform': 'android'});">
                 <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png" alt="Google Play 다운로드">
             </a>
         </div>
-
-        <div class="footer">
-            © 2026 Roundup. All rights reserved.
-        </div>
+        <div class="footer">© 2026 Roundup. All rights reserved.</div>
     </div>
 </body>
 </html>
