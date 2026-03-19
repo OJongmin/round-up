@@ -43,7 +43,7 @@
             align-items: center; 
             min-height: 100vh; 
             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            /* 배경에 은은한 골프장 텍스처 느낌 추가 */
+            /* 배경 텍스처 */
             background-image: radial-gradient(var(--primary-green) 0.5px, transparent 0.5px);
             background-size: 30px 30px;
             background-color: #f1f5f9;
@@ -53,7 +53,7 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             padding: 60px 40px;
             border-radius: 50px;
             box-shadow: 0 40px 100px rgba(0,0,0,0.08);
@@ -62,12 +62,13 @@
             width: 90%;
             backdrop-filter: blur(25px);
             border: 1px solid rgba(255,255,255,0.6);
-            animation: float 4s ease-in-out infinite;
+            /* 흔들림 효과(animation) 제거 완료 */
+            transition: transform 0.3s ease;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        /* 마우스를 올렸을 때만 아주 살짝 반응하도록 설정 (선택 사항) */
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .logo-area img {
@@ -106,8 +107,8 @@
             font-size: 0.85rem;
             font-weight: 600;
             color: var(--primary-green);
-            background: rgba(6, 78, 59, 0.08);
-            padding: 8px 15px;
+            background: rgba(6, 78, 59, 0.1);
+            padding: 8px 18px;
             border-radius: 100px;
         }
 
@@ -131,8 +132,8 @@
         }
         
         .badge:hover {
-            transform: scale(1.08) translateY(-3px);
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+            transform: scale(1.05);
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
         }
 
         .badge-google-play img {
@@ -144,7 +145,6 @@
             margin-top: 50px;
             font-size: 0.9rem;
             color: #94a3b8;
-            font-weight: 400;
         }
 
         @media (max-width: 480px) {
