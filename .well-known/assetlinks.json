@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.roundup.golf", 
+    "sha256_cert_fingerprints": ["64:49:42:5a:71:8f:fe:de:4f:ae:c7:df:ac:25:69:1f:40:8e:b9:73:88:ce:4d:06:bb:1d:f3:17:e7:bf:78:ee"]
+  }
+}]
